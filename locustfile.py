@@ -13,7 +13,7 @@ class UserTasks(TaskSet):
 
 
 class WebsiteUser(HttpUser):
-    wait_time = constant_throughput(20)
+    wait_time = constant_throughput(50)
     # stop_timeout = 20
     tasks = [UserTasks]
 

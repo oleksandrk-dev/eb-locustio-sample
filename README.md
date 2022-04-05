@@ -9,7 +9,7 @@ Please see the [documentation](https://docs.google.com/document/d/1b24em-IKi-mnu
 3. run ```./create_environment.sh <instance_type> <number of instances>``` e.g. ```./create_environment.sh c5.xlarge 2```
 
 ### Add more worker
-1. run ```eb scale <number of current instances + number of new worker instances>``` e.g. if you already have 2 instances running and you need to add one more worker instance, you need to run ```eb scale 3```
+1. run ```./scale.sh <number of current instances + number of new worker instances>``` e.g. if you already have 2 instances running and you need to add one more worker instance, you need to run ```eb scale 3```
 
 ### Terminate an environment
 This will clean up all resources to avoid an incurred cost.

@@ -1,8 +1,9 @@
-from locust import task, TaskSet
+from locust import HttpUser, task, constant_throughput
 
 
-class UserTasks(TaskSet):
+class QuickstartUser(HttpUser):
+    wait_time = constant_throughput(1)
+
     @task
-    def get_url(self):
-        self.client.get("/us/en/india")
-        self.client.cookies.clear()
+    def landing_page(self):
+        self.client.get("/us/en/philippines")
